@@ -1,0 +1,490 @@
+/* Enhanced styles for FutureFace.ai */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa; /* Lighter background */
+    color: #343a40; /* Darker text for better contrast */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: #ffffff; /* White background for header */
+    color: #343a40;
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #007bff; /* Primary color for the brand */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #0056b3; /* Darker shade for hover/active */
+    text-decoration: underline;
+}
+
+main {
+    padding: 30px 0; /* Increased padding */
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-size: 2em;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+#upload-section p,
+#stories-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+button, .button-style {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:hover, .button-style:hover {
+    background-color: #0056b3;
+}
+
+#results-section .results-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 200px; /* Increased size */
+    height: 200px;
+    background-color: #e9ecef; /* Lighter placeholder background */
+    border: 2px dashed #007bff; /* Dashed border with primary color */
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #6c757d; /* Placeholder text color */
+    font-size: 0.9em;
+    flex-basis: calc(33.333% - 20px); /* Three items per row, considering gap */
+    box-sizing: border-box;
+}
+
+.story {
+    background-color: #f8f9fa; /* Slightly different background for stories */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 5px solid #007bff; /* Accent border */
+}
+
+.story h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #343a40; /* Darker footer */
+    color: #f8f9fa; /* Light text for footer */
+    margin-top: 30px;
+}
+
+.social-media-links a {
+    color: #f8f9fa;
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.social-media-links a:hover {
+    color: #007bff; /* Primary color on hover */
+}
+
+/* Pricing Section Styles */
+#pricing-section {
+    text-align: center; /* Center align the section title and intro paragraph */
+}
+
+#pricing-section h2 {
+    margin-bottom: 15px; /* Adjusted margin for section title */
+    border-bottom: none; /* No border for this h2, or a different style if preferred */
+    display: block; /* Make it block to center it properly */
+}
+
+#pricing-section > p { /* Targeting the introductory paragraph directly under the section */
+    font-size: 1.15em;
+    color: #6c757d; /* Softer color for intro text */
+    margin-bottom: 30px;
+}
+
+.pricing-options {
+    display: flex;
+    justify-content: space-around; /* Distribute space around items */
+    align-items: stretch; /* Make cards of equal height if content differs */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Space between pricing cards */
+    margin-top: 20px;
+}
+
+.pricing-plan {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; /* More rounded corners */
+    padding: 30px; /* Increased padding */
+    text-align: left; /* Align text to the left within cards */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Softer, more diffused shadow */
+    flex: 1; /* Allow plans to grow */
+    min-width: 300px; /* Minimum width before wrapping */
+    max-width: 450px; /* Maximum width for larger screens */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-plan:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-plan h3 {
+    font-size: 1.8em; /* Larger plan title */
+    color: #007bff; /* Primary color for plan titles */
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center; /* Center align plan titles */
+}
+
+.pricing-plan .price {
+    font-size: 2.5em; /* Prominent price */
+    font-weight: bold;
+    color: #28a745; /* Green color for price */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pricing-plan .description {
+    font-size: 1em;
+    color: #495057; /* Standard text color for description */
+    margin-bottom: 20px;
+    min-height: 60px; /* Give some space for description */
+}
+
+.features-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin-bottom: 25px; /* Space before the button */
+    flex-grow: 1; /* Allow feature list to take available space */
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    padding-left: 25px; /* Space for custom bullet */
+    position: relative;
+    font-size: 0.95em;
+    color: #343a40;
+}
+
+.features-list li::before {
+    content: '✔'; /* Custom bullet point */
+    color: #28a745; /* Green checkmark */
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+}
+
+.buy-button { /* Specific styling for buy buttons if needed */
+    margin-top: auto; /* Push button to the bottom of the card */
+    width: 100%; /* Make button full width of its container */
+    padding: 15px; /* Larger padding for buy buttons */
+    font-size: 1.2em; /* Larger font size */
+}
+
+#purchase-confirmation { /* Style for the confirmation message box */
+    /* Styles already defined inline, but can be centralized here if preferred */
+    /* e.g., border-radius: 5px; text-align: center; */
+}
+
+
+/* Upload Section Specifics */
+.upload-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.file-upload {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin: 10px; /* Added margin for spacing when wrapped */
+    flex: 1; /* Allow flex items to grow and shrink */
+    min-width: 250px; /* Minimum width before wrapping */
+}
+
+.file-upload label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.thumbnail-preview {
+    width: 180px; /* Slightly larger thumbnails */
+    height: 180px;
+    border: 2px dashed #007bff; /* Use primary color for border */
+    background-color: #ffffff;
+    margin: 10px auto 0; /* Centered with margin top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5px; /* Rounded corners for preview */
+}
+
+.thumbnail-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.style-selection {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.style-selection h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.25em;
+    color: #343a40;
+}
+
+.style-selection label {
+    margin: 0 10px; /* Adjusted margin */
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.style-selection input[type="radio"] {
+    margin-right: 5px;
+}
+
+#generate-button {
+    display: block;
+    margin: 20px auto 10px;
+}
+
+#generate-button:disabled {
+    background-color: #adb5bd; /* Softer disabled color */
+    border-color: #adb5bd;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.error-message { /* For upload errors */
+    display: block; /* Ensure it takes its own line */
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#processing-message { /* For "Processing..." message */
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+
+/* Stories Section Specifics */
+.stories-gallery {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for the gallery area */
+    border-radius: 8px;
+}
+
+.story-item {
+    display: none;
+    padding: 20px;
+    background-color: #ffffff; /* White background for individual stories */
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space for buttons */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border-left: 4px solid #007bff; /* Accent line */
+}
+
+.story-item.active-story {
+    display: block;
+}
+
+.story-item img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    max-height: 350px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6; /* Subtle border for images */
+}
+
+.story-item h3 {
+    font-size: 1.5em; /* Larger story titles */
+    color: #0056b3; /* Darker blue for story titles */
+    margin-bottom: 10px;
+}
+
+.story-item p {
+    font-size: 1em; /* Standard paragraph size for story text */
+    color: #495057; /* Softer text color */
+}
+
+#prev-story, #next-story {
+    margin: 10px 8px;
+    padding: 8px 18px; /* Slightly smaller story nav buttons */
+}
+
+/* Basic Responsiveness */
+@media (max-width: 992px) {
+    .image-placeholder {
+        flex-basis: calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .upload-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    .file-upload {
+        width: 90%; /* More width on smaller screens */
+        min-width: unset; /* Remove min-width */
+        margin-bottom: 20px;
+    }
+    .thumbnail-preview {
+        width: 160px;
+        height: 160px;
+    }
+    .style-selection label {
+        display: block; /* Stack style options */
+        margin: 5px 0;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    nav ul li a {
+        font-size: 1em;
+    }
+    section {
+        padding: 20px;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    button, .button-style {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .image-placeholder {
+        flex-basis: calc(100% - 20px); /* One item per row */
+        width: 100%; /* Make it full width */
+        max-width: 300px; /* Optional: constrain max width on small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 8px 0;
+    }
+    header {
+        padding: 1em 0;
+    }
+    main {
+        padding: 20px 0;
+    }
+    #results-section .results-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-placeholder {
+         /* Ensure it doesn't exceed parent width even if flex-basis suggests otherwise */
+        max-width: 90%;
+    }
+}
