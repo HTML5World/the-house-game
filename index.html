@@ -1,138 +1,128 @@
- <!DOCTYPE html>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The House</title>
-
-<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-
-<!-- <link  href="http://fonts.googleapis.com/css?family=Neuton:regular,italic" rel="stylesheet" type="text/css" > -->
-<link rel="stylesheet" type="text/css" href="css/styles.css" />
-
-<!-- <script src="js/libs/less-1.1.3.min.js" ></script> -->
-
-<script src="js/libs/modernizr.custom.13520.js" ></script>
-
-<script src="js/libs/min/soundmanager2-nodebug-jsmin-min.js" ></script>
-
-<script>
-Modernizr.load({
-	test: Modernizr.borderradius && Modernizr.opacity && Modernizr.csstransforms,
-	yep : [
-
-					//'js/libs/soundmanager2-nodebug-jsmin.js',
-					'js/libs/jquery-1.7.min.js',
-					'js/libs/jquery.animate-colors-min.js',
-					'js/libs/min/preloadCssImages.jQuery_v5-min.js',
-					'js/libs/min/jstorage-min.js',
-					'js/libs/min/jquery.spritely-0.6-min.js',
-					'js/libs/min/jquery-ui-1.8.11.draggable.min-min.js',
-					'js/libs/min/jquery.transit.min-min.js',
-					'js/libs/min/jquery.idle-timer.min.js',
-					
-					'js/min/dialogue_box-min.js',
-					'js/min/tooltip-min.js',
-					'js/min/text_cloud-min.js',
-
-					'js/min/data-min.js',
-					'js/min/settings-min.js',
-
-					'js/min/audio-min.js',
-					'js/min/items-min.js',
-					'js/min/view-min.js',
-
-					'js/min/room-min.js',
-
-					'js/min/scenes-min.js',
-					'js/min/npcs-min.js',
-
-					'js/min/game-min.js'
-				],
-	nope: [
-					'js/libs/jquery-1.7.min.js',
-					'js/min/old_browser.js'
-				]
-});
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureFace.ai</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FutureFace.ai</h1>
+            <nav>
+                <ul>
+                    <li><a href="#upload-section" class="active">Home (Upload)</a></li>
+                    <li><a href="#pricing-section">Pricing</a></li>
+                    <li><a href="#stories-section">Stories</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<body oncontextmenu="return false">
-<div id="return"></div>
+    <main class="container">
+        <section id="upload-section">
+            <h2>Upload Your Images</h2>
+            <p>Upload photos of both parents to generate a prediction. Please select two images.</p>
+            <div class="upload-controls">
+                <div class="file-upload">
+                    <label for="parent1-upload">Parent 1 Image:</label>
+                    <input type="file" id="parent1-upload" accept="image/*">
+                    <div class="thumbnail-preview" id="parent1-preview"></div>
+                </div>
+                <div class="file-upload">
+                    <label for="parent2-upload">Parent 2 Image:</label>
+                    <input type="file" id="parent2-upload" accept="image/*">
+                    <div class="thumbnail-preview" id="parent2-preview"></div>
+                </div>
+            </div>
+            <div class="style-selection">
+                <h3>Choose a Style:</h3>
+                <label><input type="radio" name="style" value="realistic" checked> Realistic</label>
+                <label><input type="radio" name="style" value="funny"> Funny</label>
+                <label><input type="radio" name="style" value="anime"> Anime</label>
+                <label><input type="radio" name="style" value="meme"> Meme</label>
+            </div>
+            <button id="generate-button" class="button-style" disabled>Generate Baby Photo</button>
+            <p id="upload-error" class="error-message" style="display:none; color:red;"></p>
+        </section>
 
-	<div id="the_game">
+        <section id="results-section">
+            <h2>Generated Baby Photo</h2>
+            <div id="result-image-container" class="results-grid" style="min-height: 200px;">
+                <!-- Generated image will be displayed here -->
+                <p id="processing-message" style="display:none;">Processing... please wait.</p>
+            </div>
+        </section>
 
-		<div id="information" style="
-			color:#888;
-			width: 320px;
-			position:absolute;
-			left:50%;
-			margin-left:-160px;
-			top:10%;
-			text-align:center
-		">
-			<p>You have to enable javascript on your browser in order to play The House: <a href="http://www.google.com/support/bin/answer.py?answer=23852" title="How to enable javascript?">see instructions</a> </p>
+        <section id="stories-section">
+            <h2>Your Kid Might Look Like This</h2>
+            <div class="stories-gallery">
+                <div class="story-item active-story">
+                    <div class="image-placeholder" style="height: 200px; margin-bottom: 15px;">Story Image 1 Placeholder</div>
+                    <h3>Happy Couple & Their FutureFace Baby</h3>
+                    <p>"We were so curious and the realistic style was amazing! It really looks like a mix of us."</p>
+                </div>
+                <div class="story-item">
+                    <div class="image-placeholder" style="height: 200px; margin-bottom: 15px;">Story Image 2 Placeholder</div>
+                    <h3>Laughing with the Funny Style</h3>
+                    <p>"The funny style had us in stitches! Best laugh we've had in ages. Shared it with all our friends."</p>
+                </div>
+                <div class="story-item">
+                    <div class="image-placeholder" style="height: 200px; margin-bottom: 15px;">Story Image 3 Placeholder</div>
+                    <h3>Anime Dreams Come True</h3>
+                    <p>"As anime fans, seeing our potential kid in that style was super cool and unique."</p>
+                </div>
+                <button id="prev-story" class="button-style">Previous</button>
+                <button id="next-story" class="button-style">Next</button>
+            </div>
+        </section>
 
-			<p><strong>Note:</strong>You'll also need <em>the latest browser version</em>. Otherwise the game won't start!</p>
-			
-		</div>
+        <section id="pricing-section">
+            <h2>Our Packages</h2>
+            <p>Choose the package that's right for you and start creating memories!</p>
+            <div class="pricing-options">
+                <div class="pricing-plan">
+                    <h3>Baby Pack</h3>
+                    <p class="price">₹99</p>
+                    <p class="description">Get a pack of 5 AI-generated baby photos in various styles. Perfect for sharing with family and friends!</p>
+                    <ul class="features-list">
+                        <li>5 Baby Photos</li>
+                        <li>Multiple Styles (Realistic, Anime, etc.)</li>
+                        <li>High-Resolution Images</li>
+                        <li>Quick Generation</li>
+                    </ul>
+                    <button id="buy-baby-pack" class="button-style buy-button">Buy Now</button>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Future Timeline</h3>
+                    <p class="price">₹299</p>
+                    <p class="description">See your child grow! Get AI-generated images at different life stages (baby, toddler, child, teenager).</p>
+                    <ul class="features-list">
+                        <li>Baby, Toddler, Child & Teenager Stages</li>
+                        <li>Pack of 10 Images (Multiple per stage)</li>
+                        <li>Realistic Style Progression</li>
+                        <li>A Glimpse into the Future</li>
+                    </ul>
+                    <button id="buy-future-timeline" class="button-style buy-button">Buy Now</button>
+                </div>
+            </div>
+            <div id="purchase-confirmation" style="display:none; margin-top: 20px; padding: 15px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; text-align:center;">
+                <!-- Purchase confirmation message will appear here -->
+            </div>
+        </section>
+    </main>
 
-	</div>
-	
-	<div id="wrap">
-		<div id="settings">
-			<ul>
-				<li id="settings_reset" data-info="Start from the beginning.">reset game</li>
-			</ul>
-		</div>
+    <footer>
+        <div class="container">
+            <p>© 2024 FutureFace.ai</p>
+            <div class="social-media-links">
+                <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
 
-		<div id="items">
-			<div id="button"></div>
-		</div>
-		
-		<div id="switch_sound" class="on"></div>
-		
-	</div>
-
-	<div id="lightbox">
-		<div class="close"></div>
-	</div>
-
-	<div id="author">
-		<div class="btn">i</div>
-		<p>Game made by <a target="_blank" href="http://arturkot.pl">Artur Kot</a></p>
-		<p>Follow me on <a target="_blank" href="http://twitter.com/arturkot">Twitter</a></p>
-		<p>Learn more about the game on <a target="_blank" href="http://github.com/arturkot/the-house-game">Github</a></p>
-	</div>
-
-<script>
-	//clear
-	var container = document.getElementById('the_game'), 
-		remove_information = document.getElementById('information');
-
-	container.removeChild(remove_information);
-
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-34088292-1']);
-	_gaq.push(['_trackPageview']);
-
-	(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-</script>
-
+    <script src="script.js"></script>
 </body>
-
-</html>
-
-</script>
-
-</body>
-
 </html>
