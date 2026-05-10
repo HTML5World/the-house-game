@@ -6,7 +6,7 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The House</title>
+<title>秘室迷踪</title>
 
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
@@ -34,23 +34,23 @@ Modernizr.load({
 					'js/libs/min/jquery.transit.min-min.js',
 					'js/libs/min/jquery.idle-timer.min.js',
 					
-					'js/min/dialogue_box-min.js',
-					'js/min/tooltip-min.js',
-					'js/min/text_cloud-min.js',
+					'js/dialogue_box.js',
+					'js/tooltip.js',
+					'js/text_cloud.js',
 
-					'js/min/data-min.js',
-					'js/min/settings-min.js',
+					'js/data.js',
+					'js/settings.js',
 
-					'js/min/audio-min.js',
-					'js/min/items-min.js',
-					'js/min/view-min.js',
+					'js/audio.js',
+					'js/items.js',
+					'js/view.js',
 
-					'js/min/room-min.js',
+					'js/room.js',
 
-					'js/min/scenes-min.js',
-					'js/min/npcs-min.js',
+					'js/scenes.js',
+					'js/npcs.js',
 
-					'js/min/game-min.js'
+					'js/game.js'
 				],
 	nope: [
 					'js/libs/jquery-1.7.min.js',
@@ -86,7 +86,7 @@ Modernizr.load({
 	<div id="wrap">
 		<div id="settings">
 			<ul>
-				<li id="settings_reset" data-info="Start from the beginning.">reset game</li>
+				<li id="settings_reset" data-info="Start from the beginning.">重置游戏状态</li>
 			</ul>
 		</div>
 
@@ -104,9 +104,8 @@ Modernizr.load({
 
 	<div id="author">
 		<div class="btn">i</div>
-		<p>Game made by <a target="_blank" href="http://arturkot.pl">Artur Kot</a></p>
-		<p>Follow me on <a target="_blank" href="http://twitter.com/arturkot">Twitter</a></p>
-		<p>Learn more about the game on <a target="_blank" href="http://github.com/arturkot/the-house-game">Github</a></p>
+		<p>Follow me on <a target="_blank" href="https://github.com/aiwongs">AiWoNGs</a></p>
+		<p>Learn more about the game on <a target="_blank" href="https://github.com/aiwongs/the-house-game">Github</a></p>
 	</div>
 
 <script>
@@ -119,11 +118,6 @@ Modernizr.load({
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-34088292-1']);
 	_gaq.push(['_trackPageview']);
-
-	(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 </script>
 
